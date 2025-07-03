@@ -1,12 +1,27 @@
 .skeleton {
-  .skeleton.header {
+  .skeleton-header, .skeleton-footer {
     position: fixed;
+    top: 0; // Add this
+    left: 0; // Add this
+    z-index: 1;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: 99dvw;
+    width: 100%;
 
-    padding: 8px;
+    h1, h3, p {
+      margin: 1rem;
+    }
+  }
+
+  .skeleton-footer {
+    top: unset;
+    bottom: 0;
+
+    p {
+      width: 30%;
+    }
   }
 }

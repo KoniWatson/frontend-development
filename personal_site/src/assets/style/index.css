@@ -7,16 +7,89 @@
 }
 .projects .project-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
   height: 100dvh;
+  width: 100dvw;
+}
+.projects .project-section .project-section-link {
+  z-index: 1;
+}
+.projects .project-section .project-section-link h2 {
+  font-family: "Bitcount Grid Double", system-ui;
+}
+.projects .project-section.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+.projects .project-section.parallax .parallax-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.projects .project-section.parallax .layer1 {
+  transform: translateZ(0);
+}
+.projects .project-section.parallax .layer2 {
+  transform: translateZ(-1px);
+}
+.projects .project-section.parallax .layer3 {
+  transform: translateZ(-2px);
+}
+.projects .project-section.parallax .parallax-layer.layer1 {
+  width: 100%;
+  height: 100rem;
+  background-color: red;
+}
+.projects .project-section.parallax .parallax-layer.layer2 {
+  top: 10rem;
+  width: 100%;
+  height: 50rem;
+  background-color: green;
+}
+.projects .project-section.parallax .parallax-layer.layer3 {
+  top: 20rem;
+  width: 100%;
+  height: 50rem;
+  background-color: blue;
 }
 
-.skeleton .skeleton.header {
+.skeleton .skeleton-header, .skeleton .skeleton-footer {
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 99dvw;
-  padding: 8px;
+  width: 100%;
+}
+.skeleton .skeleton-header h1, .skeleton .skeleton-header h3, .skeleton .skeleton-header p, .skeleton .skeleton-footer h1, .skeleton .skeleton-footer h3, .skeleton .skeleton-footer p {
+  margin: 1rem;
+}
+.skeleton .skeleton-footer {
+  top: unset;
+  bottom: 0;
+}
+.skeleton .skeleton-footer p {
+  width: 30%;
+}
+
+:root {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
 }/*# sourceMappingURL=index.css.map */

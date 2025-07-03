@@ -1,5 +1,5 @@
-import Projects from "./pages/Projects";
-import "./assets/style/index.sass"
+import Projects from "./components/Projects";
+import "./assets/style/index.css";
 
 function App() {
   return (
@@ -12,10 +12,11 @@ function App() {
 
       <Projects />
 
-      <footer className="skeleton-header">
+      <footer className="skeleton-footer">
         <p>
-          This is a personal website to display my portfolio of walk and
-          personal projects
+          This is a personal website to display my projects and skills. It is a
+          work in progress, so please check back later for updates and new
+          additions
         </p>
       </footer>
     </div>
